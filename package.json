@@ -1,0 +1,33 @@
+{
+  "name": "crud-api",
+  "version": "1.0.0",
+  "description": "CRUD API for Product Catalog using Fastify",
+  "scripts": {
+    "start:dev": "tsx watch src/server.ts",
+    "start:prod": "tsc && node dist/server.js",
+    "start:multi": "tsc && node dist/cluster.js",
+    "build": "tsc",
+    "test": "jest --forceExit --detectOpenHandles"
+  },
+  "dependencies": {
+    "@fastify/sensible": "^5.6.0",
+    "dotenv": "^16.4.7",
+    "fastify": "^4.28.1",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.10",
+    "@types/uuid": "^10.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": ["**/tests/**/*.test.ts"]
+  }
+}
